@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="img/x-icon" href="images/books.jpg">
+        <title>PRACTICAL 1</title>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Gluten&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <style>
+            .books{
+                height: 30px;
+                width: 100 px;
+            }
+
+            .row {
+            display: flex;
+            }
+
+            .column {
+            flex: 33.33%;
+            padding: 5px;
+            }
+
+            .navbar{
+                color: #ffffff;
+            }
+            
+        .big-button {
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: #EEA47F;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .big-button:hover {
+            background-color: #f26428;
+        }
+
+        .big-button.active {
+            background-color: #e7703d;
+        }
+
+            .place{
+                margin-top: -45px;
+                font-family: Dancing Script;
+                font-size: 25px;
+            }
+            header::before{
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYesINlijLw1e1cpnvy_hFfPbuJ-NBJoEAg&usqp=CAU') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        section {
+            height: 344px;
+            font-family: 'Bree Serif', serif;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .navigation {
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+            display: flex;
+        }
+        .item{
+            list-style: none;
+            padding: 20px 23px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #EEA47F;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #e77238;
+        }
+
+        .navbar a.active {
+            background-color: #f14d3b;
+        }
+        .breadcrumb {
+            background-color: #EEA47F;
+            color: white;
+            border-radius: 0;
+            padding: 8px 15px;
+            font-size: 18px;
+        }
+
+        .breadcrumb-item a {
+            color: white;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+        </style>
+    </head>
+    <body style="background-color:rgb(0, 0, 0);">
+        <header>
+            <nav class="navbar">
+              
+                <div class="navbar">
+                    <a href="WC_1.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Books List</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </nav>
+            <nav aria-label="breadcrumb">
+                <div class="row">
+                    <div class="col">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">Intro</li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+        <h1 style="color: #ffffff;text-align: center; font-family: Tangerine; font-size: 65px;text-shadow: 4px 4px 4px #aaa;">BOOK<br>FORUM</h1>
+        <div class="place">
+            <h4 style="color: #ffffff;text-align: center;">a place to know various books</h4>
+        </div>
+        <button class="big-button" id="toggleButton" style="font-family: Gluten;"><a href="WC_1.html">Go to Home Page</a></button>
+          </section>
+       

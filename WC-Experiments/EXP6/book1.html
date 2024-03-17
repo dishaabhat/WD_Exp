@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"To Kill a Mockingbird" - Classic Literature Site</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Gluten&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .book-cover {
+            display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 400px;}
+  .navbar {
+            background-color: #EEA47F;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #e77238;
+        }
+
+        .navbar a.active {
+            background-color: #f14d3b;
+        }
+        .search-container {
+            float: right;
+           margin-top: -40px;
+            margin-right: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .search-container button {
+            padding: 6px 10px;
+            background: #ddd;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .breadcrumb {
+            background-color: #EEA47F;
+            color: white;
+            border-radius: 0;
+            padding: 8px 15px;
+            font-size: 18px;
+            
+        }
+        .breadcrumb-item a {
+            color: white;
+        }
+
+       
+        .breadcrumb-item.active {
+            color: white;
+        }
+        .breadcrumb-container {
+    max-width: 100px; 
+}
+.jumbotron {
+    background-color: #EEA47F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.jumbotron h1 {
+    font-family: 'Courgette';
+}
+
+.jumbotron p {
+    font-family: verdana;
+}
+.rating{
+    text-align: center;
+}
+.checked {
+  color: orange;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #EEA47F;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    color: #EEA47F;
+    position: relative;
+  }
+  
+  .section-title .has-before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 60px;
+    background-color: #EEA47F;
+    content: '';
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px; /* Adjust the margin as needed */
+  }
+  
+  /* Contact Form */
+  
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #EEA47F; /* Input border color */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333; /* Text color */
+  }
+  
+  /* Primary Button */
+  .btn.btn-primary {
+    background-color: #EEA47F; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #e77238; /* Button background color on hover */
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #EEA47F;
+    margin-bottom: 10px;
+  }
+  
+  .address {
+    color: #333; /* Text color */
+  }
+  
+  .card-link {
+    color: #8EE4AF; /* Link color */
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Social Icons */
+  .social-list-title {
+    font-size: 24px;
+    color: #EEA47F;
+    margin-top: 20px;
+  }
+  
+  .social-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .social-link {
+    font-size: 24px;
+    color: #EEA47F;
+    margin-right: 20px; /* Adjust the spacing as needed */
+    text-decoration: none;
+  }
+  
+  /* Adjust icon size for ion-icons */
+  ion-icon {
+    font-size: 28px;
+  }
+
+  /* Centered content box with black background on sides */
+
+  /* Style your contact section as previously provided */
+  
+  
+
+  /* Style your contact section as previously provided */
+  .section.contact {
+    background-color: #fff; /* Background color for the contact section */
+    padding: 40px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Add rounded corners to the content box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to the box */
+    max-width: 770px; /* Limit the maximum width of the contact section */
+    width: 100%; /* Ensure the contact section takes the full available width */
+    margin-left: 0px;
+  }
+  
+  /* Style the form to be centered */
+  .contact-form {
+    text-align: center; /* Center-align the form content */
+    margin: 0 auto; /* Center the form horizontally within the contact section */
+  }
+  
+  /* Add the rest of the CSS for your contact section as previously provided */
+  /* ... */
+  
+  
+
+    </style>
+</head>
+<body style="background-color:rgb(0, 0, 0);">
+    <header>
+        <nav class="navbar">
+              
+            <div class="navbar">
+                <a href="WC_1.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Books List</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+        <div class="breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Intro</a></li>
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Book1</li>
+                    </ol>
+                </div>
+            </div>
+        </nav></div>
+        <div class="jumbotron">
+            <h1 style="color: #ffffff; text-align: center;font-family: 'Courgette'">" To Kill a Mockingbird "</h1>
+        <p style="color: #ffffff; font-family: verdana; text-align: center;">by Harper Lee</p>
+        </div>
+        
+    </header>
+    <main> <br>
+        <h2 style="color: #ffffff;font-family: verdana;text-align: center;">Average Rating: 4<span class="fa fa-star checked"></span></h2>
+        <h3 style="color: #ffffff;font-family: verdana;text-align: center;">Give yours:</h3>
+        <div class="rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+          
+          <div class="average-rating">Average Rating: <span id="averageRating">4&#9733;</span></div>
+          
+          <script>
+            const stars = document.querySelectorAll('.star');
+            
+            const averageRatingElement = document.getElementById('averageRating');
+            
+            const ratings = [0, 0, 0, 0, 0];
+            
+            stars.forEach(star => {
+              star.addEventListener('mouseover', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                highlightStars(rating);
+              });
+            
+              star.addEventListener('mouseout', function() {
+                resetStars();
+              });
+            
+              star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                updateRating(rating);
+              });
+            });
+            
+            function highlightStars(rating) {
+              stars.forEach((star, index) => {
+                if (index < rating) {
+                  star.style.color = '#EEA47F';
+                } else {
+                  star.style.color = '#aaa';
+                }
+              });
+            }
+            
+            function resetStars() {
+              stars.forEach(star => {
+                star.style.color = '#aaa';
+              });
+            }
+            
+            function updateRating(rating) {
+              ratings[rating - 1]++;
+            
+              let totalRatings = 0;
+              let totalStars = 0;
+              ratings.forEach((count, index) => {
+                totalRatings += count;
+                totalStars += count * (index + 1);
+              });
+            
+              const averageRating = totalStars / totalRatings;
+              averageRatingElement.textContent = averageRating.toFixed(1);
+            }
+            
+            highlightStars(0);
+
+            // Sample comments array (you can replace this with your backend or database)
+            let comments = [];
+
+            // Function to display existing comments
+            function displayComments() {
+                const commentsContainer = document.getElementById("existing-comments");
+                commentsContainer.innerHTML = "";
+
+                for (const comment of comments) {
+                    const commentDiv = document.createElement("div");
+                    commentDiv.innerHTML = `<strong>${comment.name}:</strong> ${comment.text}`;
+                    commentsContainer.appendChild(commentDiv);
+                }
+            }
+
+            // Function to add a new comment
+            function addComment(name, text) {
+                const comment = { name, text };
+                comments.push(comment);
+                displayComments();
+            }
+
+            // Event listener for the comment form submission
+            const commentForm = document.getElementById("comment-form");
+            commentForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const nameInput = document.getElementById("name");
+                const commentInput = document.getElementById("comment");
+                const name = nameInput.value;
+                const text = commentInput.value;
+
+                addComment(name, text);
+
+                // Clear the form inputs
+                nameInput.value = "";
+                commentInput.value = "";
+            });
+
+            // Call displayComments initially to show any existing comments
+            displayComments();
+
+
+            </script><br>
+        <img src="images\killmock.jpeg" alt="Book Cover" class="book-cover">
+        <!-- Add this script below your existing JavaScript code -->
+<script>
+    // Function to update and display the current date
+    function displayCurrentDate() {
+        const currentDateElement = document.getElementById('currentDate');
+        const currentDate = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        currentDateElement.textContent = currentDate.toLocaleDateString('en-US', options);
+    }
+
+    // Call the function to display the current date
+    displayCurrentDate();
+</script>
+
+<!-- Add this HTML section where you want to display the date -->
+<div style="text-align: center; color: #ffffff; font-family: verdana;">
+    <p style="font-size: 18px;">Current Date:</p>
+    <p style="font-size: 24px; font-weight: bold;" id="currentDate"></p>
+</div>
+
+        <div style="padding-left: 23%;text-align: justify;width:850px">
+            
+      
+            
+            <div id="existing-comments" style="font-family: verdana;background-color: #EEA47F; padding: 20px; border: 1px solid #ddd; border-radius: 10px; margin-top: 20px;">
+                <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                    <h2 style="color: #000000;font-family: verdana;">Summary</h2>
+            <p style="color: #b15f36; font-family: 'Gill Sans', sans-serif;font-weight: bold;">
+                "To Kill a Mockingbird" is a novel set in the racially charged atmosphere of the 1930s in a small Southern town. The story follows Scout Finch, her brother Jem, and their father Atticus as they navigate moral complexities and the challenges of racial injustice.
+            </p>
+                </div>
+                <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+
+            <h2 style="color: #000000;font-family: verdana;">Historical Context</h2>
+            <p style="color: #b15f36; font-family: 'Gill Sans', sans-serif;font-weight: bold;">
+                The novel explores themes of racial inequality and social injustice, reflecting the real-life tensions and struggles of the time period.
+            </p></div>
+            <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+
+            <h2 style="color: #000000;font-family: verdana;">Literary Analysis</h2>
+            <p style="color: #b15f36; font-family: 'Gill Sans', sans-serif;font-weight: bold;">
+                The book addresses important themes such as morality, empathy, and the loss of innocence. It offers a powerful critique of prejudice and discrimination.
+                <p style="color: #b15f36;font-family: 'Gill Sans', sans-serif;font-weight: bold;">Harper Lee's "To Kill a Mockingbird" is a timeless and impactful masterpiece that delves deep into the themes of racial injustice, morality, and the loss of innocence. Set against the backdrop of the racially charged 1930s in the fictional town of Maycomb, Alabama, the novel follows the life of Scout Finch, a young girl, and her brother Jem as they navigate the complexities of their small Southern community.</p>
+            <p style="color: #b15f36 ;font-weight: bold;font-family: 'Gill Sans', sans-serif;">At its core, "To Kill a Mockingbird" is a story about empathy and understanding. The novel's moral compass is guided by Atticus Finch, Scout and Jem's father, who is a lawyer tasked with defending a black man, Tom Robinson, who is falsely accused of raping a white woman. Through Atticus's unwavering commitment to justice and fairness, the novel highlights the harsh realities of racial prejudice and the challenges of challenging societal norms.</p>
+            <p style="color: #b15f36; font-family: 'Gill Sans', sans-serif;font-weight: bold;">The character development in the novel is exquisite, with Scout's innocent and curious perspective acting as a lens through which the reader witnesses the unfolding events. Scout's interactions with characters like the mysterious Boo Radley, her neighbor Miss Maudie, and her friend Dill provide both moments of humor and poignant insights into the complexities of human nature.</p>
+            <p style="font-family: 'Gill Sans', sans-serif; font-weight: bold;;color: #b15f36">Lee's writing is both poignant and evocative, capturing the essence of the Deep South with vivid descriptions and authentic dialogue. The title itself, "To Kill a Mockingbird," is a metaphor that captures the novel's central message: that it is a sin to harm innocent beings who bring nothing but joy and beauty into the world.</p>
+            <p style="font-family: 'Gill Sans', sans-serif;font-weight: bold;color: #b15f36">One of the strengths of "To Kill a Mockingbird" is its ability to provoke deep introspection. It prompts readers to examine their own beliefs, biases, and moral compasses. The novel's exploration of themes such as courage, empathy, and social justice transcends its historical context, making it a relevant and thought-provoking read for generations.</p>
+            <p style="font-family: 'Gill Sans', sans-serif;font-weight: bold ;color: #b15f36">"To Kill a Mockingbird" continues to be a seminal work that sheds light on the complexities of human behavior, the importance of standing up for what is right, and the enduring power of compassion. Its impact on literature and society is immeasurable, solidifying its place as one of the greatest novels of all time.</p>
+            
+                </p></div></div><br>
+            <div class="comment" style="background-color: #8EE4AF; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                    <h2 style="color: #000000;font-family: verdana;">Quotes</h2>
+                <blockquote style="color: #2e6743; font-weight: bold;font-family: 'Gill Sans', sans-serif;">
+                    "The one thing that doesn't abide by majority rule is a person's conscience." - Atticus Finch
+                </blockquote></div></div>
+                <h2 style="color: #ffffff;font-family: verdana;">Discussion</h2>
+                        <!-- Add this section below your book's content -->
+            <div id="comments-section">
+                <section class="section contact" id="contact" style="background-color:  #EEA47F";  aria-label="contact" >
+                    <h3 style="color: #000000;font-family: verdana;font-weight: bold; margin-top: -2.5%;">Add Your Comment</h3>
+
+                      <div class="wrapper">
+            
+                        <form action="" class="contact-form">
+            
+                          <input type="text" name="name" placeholder="Your Name" required class="input-field">
+                          <textarea name="message" placeholder="Your Comment" class="input-field"></textarea>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+            
+                        </form></section>
+                
+                <div id="existing-comments" style="font-family: verdana;background-color: #8EE4AF; padding: 20px; border: 1px solid #ddd; border-radius: 10px; margin-top: 20px;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Book Comments (3)</h3>
+                    
+                    <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">Melissa Cooper</p>
+                        <p style="font-size: 16px; margin-bottom: 10px;">A timeless classic that everyone should read. The themes are still relevant today.</p>
+                        <p style="font-size: 14px; color: #888;">Posted on August 15, 2023</p>
+                    </div>
+                    
+                    <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">Georgie Cooper</p>
+                        <p style="font-size: 16px; margin-bottom: 10px;">I read this in high school, and it's one of the best books I've ever read. Atticus Finch is a hero.</p>
+                        <p style="font-size: 14px; color: #888;">Posted on July 25, 2023</p>
+                    </div>
+                    
+                    <div class="comment" style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">Mary Cooper</p>
+                        <p style="font-size: 16px; margin-bottom: 10px;">Harper Lee's writing style is beautiful. The characters feel so real.</p>
+                        <p style="font-size: 14px; color: #888;">Posted on June 5, 2023</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+
+            <p style="color: #EEA47F; font-family: 'Gill Sans', sans-serif;">
+                Join the discussion about the book's themes and share your insights with fellow readers. ----> <a href="https://www.google.com/search?q=to+kill+a+mockingbird+reviews&sca_esv=560300077&rlz=1C1CHZN_enIN1044IN1044&sxsrf=AB5stBizWMwEQMNYJgsEzl1jmQitjOyCSg%3A1693039528522&ei=qLvpZMWXH47OseMP_LKQ-AE&gs_ssp=eJzj4tDP1TfIKkyqMmD0kirJV8jOzMlRSFTIzU_OzsxLT8osSlFIys_PBgDuuQz-&oq=to+kill+a+mockingbird+book&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnRvIGtpbGwgYSBtb2NraW5nYmlyZCBib29rKgIIADIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIKEAAYgAQYFBiHAjIFEAAYgAQyBRAAGIAEMgUQABiABDIUEC4YgAQYlwUY3AQY3gQY4ATYAQFI1C5QqANYuyJwAXgAkAEBmAGNBKABgh-qAQwwLjEwLjMuMi4xLjG4AQPIAQD4AQHCAgsQABiKBRiGAxiwA8ICBBAjGCfCAgcQABgNGIAEwgIGEAAYHhgNwgIIEAAYigUYhgPCAggQABiKBRiRAuIDBBgBIEGIBgGQBgO6BgYIARABGBQ&sclient=gws-wiz-serp&stick=H4sIAAAAAAAAAOMwe8QYxi3w8sc9YSnfSWtOXmN05-ILKMrPSk0uCUoty0wtLxYS42JzzSvJLKkU4pHi4uLQz9U3yCpMqlKSfcQoziWanWyln5Sfnw0mrIogejqYmHgWscqW5CtkZ-bkKCQq5OYnZ2fmpSdlFqUoQNUAAMzKqu57AAAA&ictx=1&ved=2ahUKEwj29fCI-PmAAxU1TGwGHdlTBB8QyNoBKAB6BAgTEAA">Here</a>
+            </p>
+            <h2 style="color: #ffffff;font-family: verdana;"><a href="">Buy the Book Now!</a></h2>
+            
+            <h2 style="color: #ffffff;font-family: verdana;">Related Books</h2>
+            <ul style="color: #ffffff;">
+                <li><a href="book2.html">Related Book 1</a></li>
+                <li><a href="book3.html">Related Book 2</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>   
